@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резервации на Хотели</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Добре дошли в системата за резервации!</h1>
+        <nav>
+            <button class="hamburger" aria-label="Toggle navigation">
+                ☰
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Начало</a></li>
+                <li><a href="contacts.html">Контакти</a></li>
+                <li><a href="gallery.html">Галерия</a></li>
+                <li><a href="about.html">За Нас</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Резервирайте своята стая!</h2>
+        <form action="reservation.php" method="post">
+            <label for="hotel">Изберете хотел:</label>
+            <select name="hotel" id="hotel">
+                <option value="hotel1">Хотел 1</option>
+                <option value="hotel2">Хотел 2</option>
+                <option value="hotel3">Хотел 3</option>
+                <option value="hotel4">Хотел 4</option>
+                <option value="hotel5">Хотел 5</option>
+            </select>
+
+            <label for="room">Изберете стая:</label>
+            <select name="room" id="room">
+                <option value="room1">Стая 1</option>
+                <option value="room2">Стая 2</option>
+                <option value="room3">Стая 3</option>
+                <option value="room4">Стая 4</option>
+                <option value="room5">Стая 5</option>
+            </select>
+
+            <label for="date">Изберете дата:</label>
+            <input type="date" id="date" name="date" required>
+
+            <button type="submit">Резервирай</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Резервации на Хотели. Всички права запазени.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

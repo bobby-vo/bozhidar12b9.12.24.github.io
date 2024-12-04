@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Свържете се с нас</h1>
+        <nav>
+          <nav>
+            <button class="hamburger" aria-label="Toggle navigation">
+                ☰
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Начало</a></li>
+                <li><a href="contacts.html">Контакти</a></li>
+                <li><a href="gallery.html">Галерия</a></li>
+                <li><a href="about.html">За Нас</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Нашите контакти</h2>
+        <p>Телефон: <a href="tel:+359123456789">+359 123 456 789</a></p>
+        <p>Имейл: <a href="mailto:info@hotelbooking.bg">info@hotelbooking.bg</a></p>
+        <p>Адрес: София, бул. "Цариградско шосе" 100</p>
+
+        <h3>Свържете се с нас директно:</h3>
+        <form action="send_message.php" method="post">
+            <label for="name">Име:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Имейл:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Съобщение:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Изпрати</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Резервации на Хотели. Всички права запазени.</p>
+    </footer>
+</body>
+</html>

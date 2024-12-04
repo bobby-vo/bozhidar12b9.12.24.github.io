@@ -1,0 +1,161 @@
+/* Основни стилове */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+header {
+  background: #4CAF50;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+nav {
+  position: relative;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background: #333;
+  margin: 12px;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 0px;
+  display: block;
+}
+
+nav ul li a:hover {
+  background: #575757;
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+form {
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  max-width: 400px;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+input, select, button, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 10px;
+}
+
+button {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #45a049;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #333;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+/* Style for the gallery container */
+.gallery {
+  display: flex;
+  flex-wrap: wrap; /* Ensure images wrap to the next row if they don't fit */
+  justify-content: center; /* Center-align the images */
+  gap: 10px; /* Add spacing between images */
+}
+
+/* Style for each image */
+.gallery img {
+  max-width: 100%; /* Ensure images don't overflow their container */
+  height: auto; /* Maintain aspect ratio */
+  flex: 1 1 calc(33.33% - 20px); /* Three images per row with some spacing */
+  object-fit: cover; /* Ensure the image fits nicely */
+  border: 1px solid #ddd; /* Optional: add a border */
+  border-radius: 5px; /* Optional: rounded corners */
+}
+
+/* Хамбургер меню */
+.hamburger {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+  margin: 10px;
+}
+
+.nav-links {
+  display: none;
+  flex-direction: column;
+  background: #333;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 100;
+}
+
+.nav-links.active {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+      display: block;
+  }
+
+  nav ul {
+      flex-direction: column;
+      margin: 0;
+  }
+}
+
+@media (min-width: 769px) {
+  .nav-links {
+      display: flex; /* Покажи менюто при големи екрани */
+      flex-direction: row;
+      position: static; /* Отмени позиционирането за малки екрани */
+      width: auto; /* Нормална ширина */
+      background: none; /* Без фонов цвят */
+  }
+
+  .hamburger {
+      display: none; /* Скрий бутона за хамбургер */
+  }
+}
